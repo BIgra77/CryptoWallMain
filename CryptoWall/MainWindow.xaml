@@ -1,0 +1,26 @@
+﻿<Window x:Class="CryptoWall.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="CryptoWall" Height="600" Width="1000">
+    <Grid Background="#39A87B">
+        <Label HorizontalContentAlignment="left" VerticalContentAlignment="top" 
+               Foreground="White" Content="Welcome" FontSize="60" FontWeight="Bold"
+               HorizontalAlignment="Left" Height="800" Margin="80,85,0,0" VerticalAlignment="Top" Width="600"/>
+        <Label HorizontalContentAlignment="left" VerticalContentAlignment="top" 
+               Foreground="White" Content="To Your" FontSize="60" FontWeight="Bold"
+               HorizontalAlignment="Left" Height="800" Margin="80,185,0,0" VerticalAlignment="Top" Width="600"/>
+        <Label HorizontalContentAlignment="left" VerticalContentAlignment="top" 
+               Foreground="White" Content="CryptoWall" FontSize="60" FontWeight="Bold"
+               HorizontalAlignment="Left" Height="800" Margin="80,285,0,0" VerticalAlignment="Top" Width="600"/>
+        <Label HorizontalContentAlignment="Center" VerticalContentAlignment="Center" 
+               Foreground="White" Content="Made with ❤️ by Quentin MOUREY | Chloé STEPHAN | Florent VALLMAJO" FontSize="18" FontWeight="SemiBold"
+               HorizontalAlignment="Center" Height="100" Margin="50,450,0,0" VerticalAlignment="Top" Width="1000"/>
+        <Button Content="CRYPTO !" FontSize="45" FontWeight="Bold" Foreground="White" Background="#007348"
+                HorizontalAlignment="right" Height="90" Margin="0,145,150,0" VerticalAlignment="Top" Width="250" Click="Button_Click"/>
+        <Button Content="QUIT" FontSize="45" FontWeight="Bold" Foreground="White" Background="#007348" 
+                HorizontalAlignment="right" Height="90" Margin="0,245,150,0" VerticalAlignment="Top" Width="250" Click="Quitt_button"/>
+    </Grid>
+</Window>
