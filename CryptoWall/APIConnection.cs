@@ -31,23 +31,9 @@ namespace CryptoWall
             Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(json);
             return myDeserializedClass;
         }
-
-
-        public class Config
-        {
-            public string data { get; set; }
-            public string type { get; set; }
-        }
-
-        public class Usage
-        {
-            public int day { get; set; }
-            public int month { get; set; }
-        }
-
+        
         public class Datum
         {
-            public int id { get; set; }
             public string name { get; set; }
             public string symbol { get; set; }
             public double? price { get; set; }
@@ -57,8 +43,6 @@ namespace CryptoWall
 
         public class Root
         {
-            public Config config { get; set; }
-            public Usage usage { get; set; }
             public List<Datum> data { get; set; }
         }
 
