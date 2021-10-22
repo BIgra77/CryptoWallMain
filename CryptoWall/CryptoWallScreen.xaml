@@ -29,7 +29,7 @@
         <TextBox Name="btc1" IsReadOnly="True" HorizontalAlignment="Left" Height="75" Margin="680,275,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" BorderThickness="1,1,1,1" Background="#007348" Foreground="White" BorderBrush="White" FontSize="20" TextAlignment="Center"/>
         <TextBox IsReadOnly="True" HorizontalAlignment="Left" Height="75" Margin="880,200,0,0" Text="Market cap" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" BorderThickness="1,1,1,1" Background="#007348" Foreground="White" BorderBrush="White" FontSize="20" FontWeight="Bold" TextAlignment="Center"/>
         <TextBox Name="market1" IsReadOnly="True" HorizontalAlignment="Left" Height="75" Margin="880,275,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" BorderThickness="1,1,1,1" Background="#007348" Foreground="White" BorderBrush="White" TextAlignment="Center" FontSize="20"/>
-        
+
         <!--second crypto to show-->
         <Label HorizontalContentAlignment="left" VerticalContentAlignment="top" 
                Foreground="White" Content="Select Your Crypto : " FontSize="20" FontWeight="Bold"
@@ -46,5 +46,7 @@
         <TextBox Name="btc3" IsReadOnly="True" HorizontalAlignment="Left" Height="75" Margin="680,500,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" BorderThickness="1,1,1,1" Background="#007348" Foreground="White" BorderBrush="White" FontSize="20" TextAlignment="Center"/>
         <TextBox IsReadOnly="True" HorizontalAlignment="Left" Height="75" Margin="880,425,0,0" Text="Market cap" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" BorderThickness="1,1,1,1" Background="#007348" Foreground="White" BorderBrush="White" FontSize="20" FontWeight="Bold" TextAlignment="Center"/>
         <TextBox Name="market3" IsReadOnly="True" HorizontalAlignment="Left" Height="75" Margin="880,500,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" BorderThickness="1,1,1,1" Background="#007348" Foreground="White" BorderBrush="White" TextAlignment="Center" FontSize="20"/>
+        <Button Content="HOME" FontSize="45" FontWeight="Bold" Foreground="White" Background="#007348" 
+                HorizontalAlignment="Right" Height="66" Margin="0,38,120,0" VerticalAlignment="Top" Width="200" Click="Home_button" RenderTransformOrigin="0.504,1.114"/>
     </Grid>
 </Window>

@@ -16,11 +16,10 @@ using System.Windows.Shapes;
 
 namespace CryptoWall
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
+    
     public partial class StartPage : Window
     {
+        
         public StartPage()
         {
             InitializeComponent();
@@ -30,16 +29,15 @@ namespace CryptoWall
         {
             try
             {
-                CryptoWallScreen p = new CryptoWallScreen();
+               CryptoWallScreen p = new CryptoWallScreen();
                 p.Show();
+                this.Close();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
                 throw;
             }
-                        
-            //p.val.Text = test;
         }
         private void Quitt_button(object sender, RoutedEventArgs e)
         {
