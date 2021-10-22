@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
         Title="CryptoWall" Height="600" Width="1000">
-    <Grid Background="#39A87B">
+       <Grid Background="#39A87B">
         <Label HorizontalContentAlignment="left" VerticalContentAlignment="top" 
                Foreground="White" Content="Welcome" FontSize="60" FontWeight="Bold"
                HorizontalAlignment="Left" Height="800" Margin="80,85,0,0" VerticalAlignment="Top" Width="600"/>
