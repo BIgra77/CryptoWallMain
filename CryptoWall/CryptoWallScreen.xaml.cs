@@ -171,12 +171,6 @@ namespace CryptoWall
             GetCheckBox2(CryptoWallScreen.AllData);
         }
         
-        public class DataToDisplay
-        {
-            public string name { get; set; }
-            public double? price { get; set; }
-        }
-
         private void Home_button(object sender, RoutedEventArgs e)
         {
             try
@@ -191,6 +185,14 @@ namespace CryptoWall
                 throw;
             }
         }
+        
+        public class DataToDisplay
+        {
+            public string name { get; set; }
+            public double? price { get; set; }
+        }
+
+        
     }
 
 }
