@@ -118,7 +118,7 @@ namespace CryptoWall
             }
         }
         //Boutonss
-        private void Button_Clicked(object sender, RoutedEventArgs e)
+        private void CryptoButton(object sender, RoutedEventArgs e)
         {
             name1.Text = "try Button_Clicked";
             stockSymbol1.Text = "try Button_Clicked";
@@ -129,7 +129,7 @@ namespace CryptoWall
             GetCheckBox(CryptoWallScreen.AllData);
         }
         
-        private void Button_Clicked2(object sender, RoutedEventArgs e)
+        private void CryptoButton2(object sender, RoutedEventArgs e)
         {
             name3.Text = "try Button_Clicked";
             stockSymbol3.Text = "try Button_Clicked";
