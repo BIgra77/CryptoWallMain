@@ -1,52 +1,35 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
-using System.Threading;
 
 namespace CryptoWall
 {
-    /// <summary>
-    /// Logique d'interaction pour CryptoWallScreen.xaml
-    /// </summary>
     public partial class CryptoWallScreen : Window
     {
         private static Task<LunarCrush.Root> AllData;
-        private static Task<LunarCrush.Root> AltCoin;
-        private static List<DataToDisplay> AllDataToDisplay = new List<DataToDisplay>() { };
-
         public CryptoWallScreen()
         {
             InitializeComponent();
             CryptoWallScreen.AllData = Initialize();
             CryptoWallScreen.AllData = Initialize2();
-            /*CryptoWallScreen.AltCoin = Initialize3();*/
         }
 
         private async Task<LunarCrush.Root> Initialize()
         {
-            LunarCrush Lune = new LunarCrush();
-            info.Text = await Lune.Connect();
-            List<string> AllName = new List<string>() { } ;
-            LunarCrush.Root tmp = Lune.transfert(info.Text);
+            LunarCrush lunarCrush = new LunarCrush();
+            info.Text = await lunarCrush.Connect();
+            List<string> CryptoName = new List<string>() { } ;
+            LunarCrush.Root tmp = lunarCrush.transfert(info.Text);
 
             try
             {
                 for (int i=0; i<20; i++)
                 {
-                    AllName.Add(tmp.data[i].name);
+                    CryptoName.Add(tmp.data[i].name);
                 }
-                ChoiceComboBox.ItemsSource = AllName;
-                
+                ChoiceComboBox.ItemsSource = CryptoName;
             }
             catch (Exception e)
             {
@@ -61,18 +44,18 @@ namespace CryptoWall
         
         private async Task<LunarCrush.Root> Initialize2()
         {
-            LunarCrush Lune = new LunarCrush();
-            info.Text = await Lune.Connect();
-            List<string> AllName = new List<string>() { } ;
-            LunarCrush.Root transf = Lune.transfert(info.Text);
+            LunarCrush lunarCrush = new LunarCrush();
+            info.Text = await lunarCrush.Connect();
+            List<string> CryptoName = new List<string>() { } ;
+            LunarCrush.Root transf = lunarCrush.transfert(info.Text);
 
             try
             {
-                for (int i=0; i<20; i++)
+                for (int i=0; i<20 ; i++)
                 {
-                    AllName.Add(transf.data[i].name);
+                    CryptoName.Add(transf.data[i].name);
                 }
-                ChoiceComboBox2.ItemsSource = AllName;
+                ChoiceComboBox2.ItemsSource = CryptoName;
                 
             }
             catch (Exception e)
@@ -86,35 +69,6 @@ namespace CryptoWall
             return transf;
         }
         
-        
-        /*best altCoin to buy*/
-        /*private async Task<LunarCrush.Root> Initialize3()
-        {
-            LunarCrush Lune = new LunarCrush();
-            info.Text = await Lune.Connect();
-            
-            LunarCrush.Root transf = Lune.transfert(info.Text);
-
-            /*try
-            {
-                for (int i=0; i<20; i++)
-                {
-                    Name1.Add(transf.data[i].name);
-                }
-
-                ChoiceComboBox.ItemsSource = Name1;
-                ChoiceComboBox2.ItemsSource = Name2;
-                
-            }#1#
-            catch (Exception e)
-            {
-                
-
-                altName.Text = e.ToString();
-            }
-            return transf;
-        }*/
-
         private void GetCheckBox(Task<LunarCrush.Root> AllData)
         {
             var queryAllDataName = from Data in AllData.Result.data
@@ -148,30 +102,28 @@ namespace CryptoWall
                 market3.Text = "" + item.Market_cap;
             }
         }
-        //Boutonss
-        private void CryptoButton(object sender, RoutedEventArgs e)
+        private void CryptoButton(object sender, RoutedEventArgs e) //first button to get info crypto
         {
-            name1.Text = "try Button_Clicked";
-            stockSymbol1.Text = "try Button_Clicked";
-            price1.Text = "try Button_Clicked";
-            btc1.Text = "try Button_Clicked";
-            market1.Text = "try Button_Clicked";
+            name1.Text = "";
+            stockSymbol1.Text = "";
+            price1.Text = "";
+            btc1.Text = "";
+            market1.Text = "";
             
             GetCheckBox(CryptoWallScreen.AllData);
         }
         
-        private void CryptoButton2(object sender, RoutedEventArgs e)
+        private void CryptoButton2(object sender, RoutedEventArgs e) //second button to get info crypto
         {
-            name3.Text = "try Button_Clicked";
-            stockSymbol3.Text = "try Button_Clicked";
-            price3.Text = "try Button_Clicked";
-            btc3.Text = "try Button_Clicked";
-            market3.Text = "try Button_Clicked";
+            name3.Text = "";
+            stockSymbol3.Text = "";
+            price3.Text = "";
+            btc3.Text = "";
+            market3.Text = "";
             
             GetCheckBox2(CryptoWallScreen.AllData);
         }
-        
-        private void Home_button(object sender, RoutedEventArgs e)
+        private void Home_button(object sender, RoutedEventArgs e) //button to go back to StartPage
         {
             try
             {
@@ -185,14 +137,5 @@ namespace CryptoWall
                 throw;
             }
         }
-        
-        public class DataToDisplay
-        {
-            public string name { get; set; }
-            public double? price { get; set; }
-        }
-
-        
     }
-
 }

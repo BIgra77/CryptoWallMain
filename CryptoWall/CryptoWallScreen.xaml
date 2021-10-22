@@ -13,7 +13,7 @@
     <Grid Panel.ZIndex="1" Background="#39A87B" Height="650" VerticalAlignment="Top" HorizontalAlignment="Right" Width="1200" Margin="0,0,-11,0">
         <TextBox Name="info" HorizontalAlignment="Left" Height="315" 
                  Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="553" 
-                 VerticalScrollBarVisibility="Auto" Visibility="Hidden"/>
+                 VerticalScrollBarVisibility="Auto" Margin="400,350,0,0" Visibility="hidden"/>
         <Label HorizontalContentAlignment="left" VerticalContentAlignment="top" 
                Foreground="White" Content="Crypto Wall" FontSize="70" FontWeight="Bold"
                HorizontalAlignment="center" Height="800" Margin="150,15,0,0" VerticalAlignment="Top" Width="600"/>
@@ -54,5 +54,9 @@
         <TextBox Name="market3" IsReadOnly="True" HorizontalAlignment="Left" Height="75" Margin="880,480,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" BorderThickness="0,1,1,0" Background="#007348" Foreground="White" BorderBrush="White" TextAlignment="Center" FontSize="20"/>
         <Button Content="🏠" FontSize="30" FontWeight="Bold" Foreground="White" Background="#007348" 
                 HorizontalAlignment="Right" Height="50" Margin="1020,38,120,0" VerticalAlignment="Top" Width="50" Click="Home_button" RenderTransformOrigin="0.504,1.114"/>
+        
+        <!--Ratio between two price to see which one is the most expensive-->
+        
     </Grid>
+    
 </Window>
