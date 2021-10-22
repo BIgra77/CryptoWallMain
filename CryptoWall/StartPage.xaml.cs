@@ -19,9 +19,9 @@ namespace CryptoWall
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class StartPage : Window
     {
-        public MainWindow()
+        public StartPage()
         {
             InitializeComponent();
         }
@@ -52,8 +52,6 @@ namespace CryptoWall
                 MessageBox.Show(ex.ToString());
                 throw;
             }
-                        
-            //p.val.Text = test;
         }
     }
 }
