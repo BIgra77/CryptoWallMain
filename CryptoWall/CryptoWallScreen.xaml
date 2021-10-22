@@ -3,7 +3,6 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:syncfusion="clr-namespace:Syncfusion.UI.Xaml.Charts;assembly=Syncfusion.SfChart.WPF"
         xmlns:local="clr-namespace:CryptoWall" xmlns:chart="http://schemas.syncfusion.com/wpf"
         mc:Ignorable="d"
         Title="InfoCrypto" Height="800" Width="1200">
@@ -33,7 +32,6 @@
         <TextBox Name="market1" IsReadOnly="True" HorizontalAlignment="Left" Height="75" Margin="880,275,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" BorderThickness="1,1,1,1" Background="#007348" Foreground="White" BorderBrush="White" TextAlignment="Center" FontSize="20"/>
         
         <!--second crypto to show-->
-        
         <Label HorizontalContentAlignment="left" VerticalContentAlignment="top" 
                Foreground="White" Content="Select Your Crypto : " FontSize="20" FontWeight="Bold"
                HorizontalAlignment="left" Height="400" Margin="80,375,0,0" VerticalAlignment="Top" Width="200"/>
