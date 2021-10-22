@@ -176,6 +176,21 @@ namespace CryptoWall
             public string name { get; set; }
             public double? price { get; set; }
         }
+
+        private void Home_button(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                StartPage p = new StartPage();
+                p.Show();
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                throw;
+            }
+        }
     }
 
 }
