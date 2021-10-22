@@ -140,31 +140,6 @@ namespace CryptoWall
             GetCheckBox2(CryptoWallScreen.AllData);
         }
         
-        
-        private void Button_Clicked_Get(object sender, RoutedEventArgs e)
-        {
-            CryptoWallScreen.AllDataToDisplay = GetTheTop(CryptoWallScreen.AllData);
-        }
-
-        //////////Graphiques  A enlever !!!!!!!!!!!!!!
-        private List<DataToDisplay> GetTheTop (Task<LunarCrush.Root> AllData)
-        {
-            List<DataToDisplay> AllDataToDisplay = new List<DataToDisplay>() { };
-
-            var queryTop = (from Data in AllData.Result.data
-                              orderby Data.price.HasValue descending
-                            select new DataToDisplay { name = Data.name, price = Data.price }).Take(5);
-
-             foreach (DataToDisplay item in queryTop)
-             {
-                 AllDataToDisplay.Add(item);
-            }
-          
-            return AllDataToDisplay;
-        }
-
-        
-
         public class DataToDisplay
         {
             public string name { get; set; }
