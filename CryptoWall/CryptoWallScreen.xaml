@@ -6,27 +6,47 @@
         xmlns:syncfusion="clr-namespace:Syncfusion.UI.Xaml.Charts;assembly=Syncfusion.SfChart.WPF"
         xmlns:local="clr-namespace:CryptoWall" xmlns:chart="http://schemas.syncfusion.com/wpf"
         mc:Ignorable="d"
-        Title="InfoCrypto" Height="645" Width="1093">
+        Title="InfoCrypto" Height="800" Width="1200">
 
-    <Grid Panel.ZIndex="1" Background="#39A87B" Height="635" VerticalAlignment="Top" HorizontalAlignment="Right" Width="1104" Margin="0,0,-11,0">
+    <Grid Panel.ZIndex="1" Background="#39A87B" Height="800" VerticalAlignment="Top" HorizontalAlignment="Right" Width="1200" Margin="0,0,-11,0">
         <TextBox Name="info" HorizontalAlignment="Left" Height="315" 
                  Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="553" 
                  VerticalScrollBarVisibility="Auto" Visibility="Hidden"/>
         <Label HorizontalContentAlignment="left" VerticalContentAlignment="top" 
                Foreground="White" Content="Crypto Wall" FontSize="70" FontWeight="Bold"
-               HorizontalAlignment="center" Height="800" Margin="80,15,0,0" VerticalAlignment="Top" Width="600"/>
-        <ComboBox Name="ChoiceComboBox" HorizontalAlignment="Left" Height="38" Margin="30,75,0,0" VerticalAlignment="Top" Width="160" Foreground="#007348" BorderBrush="White" BorderThickness="1,1,1,1" Background="#007348" FontSize="15"/>
-        <TextBox Name="textbox1" HorizontalAlignment="Left" Height="75" Margin="30,100,0,0" Text="Name" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" BorderThickness="1,1,1,1" Background="#007348" Foreground="White" BorderBrush="White" TextAlignment="Center"  FontSize="20" FontWeight="Bold"/>
-        <TextBox Name="textbox2" HorizontalAlignment="Left" Height="75" Margin="30,175,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="199.5" BorderThickness="1,1,1,1" Background="#007348" Foreground="White" BorderBrush="White" FontSize="20" TextAlignment="Center"/>
-        <TextBox Name="textbox3" HorizontalAlignment="Left" Height="75" Margin="230,100,0,0" Text="Symbol" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" BorderThickness="1,1,1,1" Background="#007348" Foreground="White" BorderBrush="White" FontSize="20" TextAlignment="Center" FontWeight="Bold"/>
-        <TextBox Name="textbox4" HorizontalAlignment="Left" Height="75" Margin="230,175,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" BorderThickness="1,1,1,1" Background="#007348" Foreground="White" BorderBrush="White" TextAlignment="Center" FontSize="20"/>
-        <TextBox Name="textbox5" HorizontalAlignment="Left" Height="75" Margin="430,100,0,0" Text="Price" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" BorderThickness="1,1,1,1" Background="#007348" Foreground="White" BorderBrush="White" FontSize="20" TextAlignment="Center" FontWeight="Bold"/>
-        <TextBox Name="textbox6" HorizontalAlignment="Left" Height="75" Margin="430,175,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" BorderThickness="1,1,1,1" Background="#007348" Foreground="White" BorderBrush="White" FontSize="20" TextAlignment="Center"/>
-        <TextBox Name="textbox7" HorizontalAlignment="Left" Height="75" Margin="630,100,0,0" Text="Price BTC" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" BorderThickness="1,1,1,1" Background="#007348" Foreground="White" BorderBrush="White" FontSize="20" TextAlignment="Center" FontWeight="Bold"/>
-        <TextBox Name="textbox8" HorizontalAlignment="Left" Height="75" Margin="630,175,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" BorderThickness="1,1,1,1" Background="#007348" Foreground="White" BorderBrush="White" FontSize="20" TextAlignment="Center"/>
-        <TextBox Name="textbox9" HorizontalAlignment="Left" Height="75" Margin="830,100,0,0" Text="Market cap" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" BorderThickness="1,1,1,1" Background="#007348" Foreground="White" BorderBrush="White" FontSize="20" FontWeight="Bold" TextAlignment="Center"/>
-        <TextBox Name="textbox10" HorizontalAlignment="Left" Height="75" Margin="830,175,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" BorderThickness="1,1,1,1" Background="#007348" Foreground="White" BorderBrush="White" TextAlignment="Center" FontSize="20"/>
-        <Button x:Name="InfoCrypto" Content="See" Click="Button_Clicked" HorizontalAlignment="Left" Height="44" Margin="249,32,0,0" VerticalAlignment="Top" Width="95" Background="#007348" Foreground="White" BorderBrush="White" FontWeight="Bold"/>
-
+               HorizontalAlignment="center" Height="800" Margin="150,15,0,0" VerticalAlignment="Top" Width="600"/>
+        <!--first crypto to show-->
+        <Label HorizontalContentAlignment="left" VerticalContentAlignment="top" 
+               Foreground="White" Content="Select Your Crypto : " FontSize="20" FontWeight="Bold"
+               HorizontalAlignment="left" Height="400" Margin="80,150,0,0" VerticalAlignment="Top" Width="200"/>
+        <ComboBox Name="ChoiceComboBox"  HorizontalAlignment="Left" Height="38" Margin="280,150,0,0" VerticalAlignment="Top" Width="280" Foreground="#007348" BorderBrush="White" BorderThickness="1,1,1,1" Background="#007348" FontSize="15"/>
+        <Button x:Name="InfoCrypto" Content="See" Click="Button_Clicked" HorizontalAlignment="Left" Height="44" Margin="580,147,0,0" VerticalAlignment="Top" Width="95" Background="#007348" Foreground="White" BorderBrush="White" FontWeight="Bold"/>
+        <TextBox Name="name" HorizontalAlignment="Left" Height="75" Margin="80,200,0,0" Text="Name" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" BorderThickness="1,1,1,1" Background="#007348" Foreground="White" BorderBrush="White" TextAlignment="Center"  FontSize="20" FontWeight="Bold"/>
+        <TextBox Name="name1" HorizontalAlignment="Left" Height="75" Margin="80,275,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="199.5" BorderThickness="1,1,1,1" Background="#007348" Foreground="White" BorderBrush="White" FontSize="20" TextAlignment="Center"/>
+        <TextBox Name="stockSymbol" HorizontalAlignment="Left" Height="75" Margin="280,200,0,0" Text="Stock Symbol" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" BorderThickness="1,1,1,1" Background="#007348" Foreground="White" BorderBrush="White" FontSize="20" TextAlignment="Center" FontWeight="Bold"/>
+        <TextBox Name="stockSymbol1" HorizontalAlignment="Left" Height="75" Margin="280,275,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" BorderThickness="1,1,1,1" Background="#007348" Foreground="White" BorderBrush="White" TextAlignment="Center" FontSize="20"/>
+        <TextBox Name="price" HorizontalAlignment="Left" Height="75" Margin="480,200,0,0" Text="Price" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" BorderThickness="1,1,1,1" Background="#007348" Foreground="White" BorderBrush="White" FontSize="20" TextAlignment="Center" FontWeight="Bold"/>
+        <TextBox Name="price1" HorizontalAlignment="Left" Height="75" Margin="480,275,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" BorderThickness="1,1,1,1" Background="#007348" Foreground="White" BorderBrush="White" FontSize="20" TextAlignment="Center"/>
+        <TextBox Name="btc" HorizontalAlignment="Left" Height="75" Margin="680,200,0,0" Text="Price BTC" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" BorderThickness="1,1,1,1" Background="#007348" Foreground="White" BorderBrush="White" FontSize="20" TextAlignment="Center" FontWeight="Bold"/>
+        <TextBox Name="btc1" HorizontalAlignment="Left" Height="75" Margin="680,275,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" BorderThickness="1,1,1,1" Background="#007348" Foreground="White" BorderBrush="White" FontSize="20" TextAlignment="Center"/>
+        <TextBox Name="market" HorizontalAlignment="Left" Height="75" Margin="880,200,0,0" Text="Market cap" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" BorderThickness="1,1,1,1" Background="#007348" Foreground="White" BorderBrush="White" FontSize="20" FontWeight="Bold" TextAlignment="Center"/>
+        <TextBox Name="market1" HorizontalAlignment="Left" Height="75" Margin="880,275,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" BorderThickness="1,1,1,1" Background="#007348" Foreground="White" BorderBrush="White" TextAlignment="Center" FontSize="20"/>
+        <!--second crypto to show-->
+        
+        <Label HorizontalContentAlignment="left" VerticalContentAlignment="top" 
+               Foreground="White" Content="Select Your Crypto : " FontSize="20" FontWeight="Bold"
+               HorizontalAlignment="left" Height="400" Margin="80,375,0,0" VerticalAlignment="Top" Width="200"/>
+        <ComboBox Name="ChoiceComboBox2"  HorizontalAlignment="Left" Height="38" Margin="280,375,0,0" VerticalAlignment="Top" Width="280" Foreground="#007348" BorderBrush="White" BorderThickness="1,1,1,1" Background="#007348" FontSize="15"/>
+        <Button x:Name="InfoCrypto2" Content="See" Click="Button_Clicked2" HorizontalAlignment="Left" Height="44" Margin="580,372,0,0" VerticalAlignment="Top" Width="95" Background="#007348" Foreground="White" BorderBrush="White" FontWeight="Bold"/>
+        <TextBox Name="name2" HorizontalAlignment="Left" Height="75" Margin="80,425,0,0" Text="Name" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" BorderThickness="1,1,1,1" Background="#007348" Foreground="White" BorderBrush="White" TextAlignment="Center"  FontSize="20" FontWeight="Bold"/>
+        <TextBox Name="name3" HorizontalAlignment="Left" Height="75" Margin="80,500,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="199.5" BorderThickness="1,1,1,1" Background="#007348" Foreground="White" BorderBrush="White" FontSize="20" TextAlignment="Center"/>
+        <TextBox Name="stockSymbol2" HorizontalAlignment="Left" Height="75" Margin="280,425,0,0" Text="Stock Symbol" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" BorderThickness="1,1,1,1" Background="#007348" Foreground="White" BorderBrush="White" FontSize="20" TextAlignment="Center" FontWeight="Bold"/>
+        <TextBox Name="stockSymbol3" HorizontalAlignment="Left" Height="75" Margin="280,500,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" BorderThickness="1,1,1,1" Background="#007348" Foreground="White" BorderBrush="White" TextAlignment="Center" FontSize="20"/>
+        <TextBox Name="price2" HorizontalAlignment="Left" Height="75" Margin="480,425,0,0" Text="Price" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" BorderThickness="1,1,1,1" Background="#007348" Foreground="White" BorderBrush="White" FontSize="20" TextAlignment="Center" FontWeight="Bold"/>
+        <TextBox Name="price3" HorizontalAlignment="Left" Height="75" Margin="480,500,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" BorderThickness="1,1,1,1" Background="#007348" Foreground="White" BorderBrush="White" FontSize="20" TextAlignment="Center"/>
+        <TextBox Name="btc2" HorizontalAlignment="Left" Height="75" Margin="680,425,0,0" Text="Price BTC" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" BorderThickness="1,1,1,1" Background="#007348" Foreground="White" BorderBrush="White" FontSize="20" TextAlignment="Center" FontWeight="Bold"/>
+        <TextBox Name="btc3" HorizontalAlignment="Left" Height="75" Margin="680,500,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" BorderThickness="1,1,1,1" Background="#007348" Foreground="White" BorderBrush="White" FontSize="20" TextAlignment="Center"/>
+        <TextBox Name="market2" HorizontalAlignment="Left" Height="75" Margin="880,425,0,0" Text="Market cap" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" BorderThickness="1,1,1,1" Background="#007348" Foreground="White" BorderBrush="White" FontSize="20" FontWeight="Bold" TextAlignment="Center"/>
+        <TextBox Name="market3" HorizontalAlignment="Left" Height="75" Margin="880,500,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" BorderThickness="1,1,1,1" Background="#007348" Foreground="White" BorderBrush="White" TextAlignment="Center" FontSize="20"/>
     </Grid>
 </Window>

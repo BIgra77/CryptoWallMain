@@ -24,8 +24,7 @@ namespace CryptoWall
             string res =
                     await client.GetStringAsync(
                         "https://api.lunarcrush.com/v2?data=meta&key=0yhms1bivd391vg0g7klyb1&type=price");
-
-            return res;
+                        return res;
         }
 
         public Root transfert (string json){
