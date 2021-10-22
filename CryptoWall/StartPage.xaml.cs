@@ -38,8 +38,6 @@ namespace CryptoWall
                 MessageBox.Show(ex.ToString());
                 throw;
             }
-                        
-            //p.val.Text = test;
         }
         private void Quitt_button(object sender, RoutedEventArgs e)
         {

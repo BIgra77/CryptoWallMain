@@ -21,6 +21,7 @@ namespace CryptoWall
     public partial class CryptoWallScreen : Window
     {
         private static Task<LunarCrush.Root> AllData;
+        private static Task<LunarCrush.Root> AltCoin;
         private static List<DataToDisplay> AllDataToDisplay = new List<DataToDisplay>() { };
 
         public CryptoWallScreen()
@@ -28,6 +29,7 @@ namespace CryptoWall
             InitializeComponent();
             CryptoWallScreen.AllData = Initialize();
             CryptoWallScreen.AllData = Initialize2();
+            /*CryptoWallScreen.AltCoin = Initialize3();*/
         }
 
         private async Task<LunarCrush.Root> Initialize()
@@ -83,6 +85,35 @@ namespace CryptoWall
             }
             return transf;
         }
+        
+        
+        /*best altCoin to buy*/
+        /*private async Task<LunarCrush.Root> Initialize3()
+        {
+            LunarCrush Lune = new LunarCrush();
+            info.Text = await Lune.Connect();
+            
+            LunarCrush.Root transf = Lune.transfert(info.Text);
+
+            /*try
+            {
+                for (int i=0; i<20; i++)
+                {
+                    Name1.Add(transf.data[i].name);
+                }
+
+                ChoiceComboBox.ItemsSource = Name1;
+                ChoiceComboBox2.ItemsSource = Name2;
+                
+            }#1#
+            catch (Exception e)
+            {
+                
+
+                altName.Text = e.ToString();
+            }
+            return transf;
+        }*/
 
         private void GetCheckBox(Task<LunarCrush.Root> AllData)
         {
