@@ -17,7 +17,7 @@ namespace CryptoWall
         //specifies which API to connect to through the hhtps link (Lunarcrush)
         public async Task<string> Connect()
         {
-            string res = await client.GetStringAsync("https://api.lunarcrush.com/v2?data=meta&key=0yhms1bivd391vg0g7klyb1&type=price");
+            string res = await client.GetStringAsync("https://api.lunarcrush.com/v2?data=meta&key=ngpdegtqbakoto3idhlxbc&type=price");
             return res;
         }
 

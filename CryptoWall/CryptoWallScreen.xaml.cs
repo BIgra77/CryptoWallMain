@@ -16,13 +16,18 @@ namespace CryptoWall
             CryptoWallScreen.AllData = Initialize2();
         }
 
+        //init for the first combo box in the xaml
         private async Task<LunarCrush.Root> Initialize()
         {
             LunarCrush lunarCrush = new LunarCrush();
+            //print out all the info in a hidden box in the xaml so that we can then choose what we want to print out
             info.Text = await lunarCrush.Connect();
-            List<string> CryptoName = new List<string>() { } ;
-            LunarCrush.Root tmp = lunarCrush.transfert(info.Text);
 
+            //init the list of cryptocurrencies
+            List<string> CryptoName = new List<string>() { } ;
+
+            //send all the crypto data in said hidden box above
+            LunarCrush.Root tmp = lunarCrush.transfert(info.Text);
             try
             {
                 for (int i=0; i<20; i++)
@@ -42,6 +47,7 @@ namespace CryptoWall
             return tmp;
         }
         
+        //init for the second combo box in the xaml
         private async Task<LunarCrush.Root> Initialize2()
         {
             LunarCrush lunarCrush = new LunarCrush();
@@ -69,6 +75,7 @@ namespace CryptoWall
             return transf;
         }
         
+        //get the date from the select crypto and return it in the table
         private void GetCheckBox(Task<LunarCrush.Root> AllData)
         {
             var queryAllDataName = from Data in AllData.Result.data
@@ -86,6 +93,7 @@ namespace CryptoWall
             }
         }
         
+        //get the date from select crypto and return it in the second table
         private void GetCheckBox2(Task<LunarCrush.Root> AllData)
         {
             var queryAllDataName2 = from Data in AllData.Result.data
@@ -102,6 +110,8 @@ namespace CryptoWall
                 market3.Text = "" + item.Market_cap;
             }
         }
+
+        //button to validate our choice ("see" button)
         private void CryptoButton(object sender, RoutedEventArgs e) //first button to get info crypto
         {
             name1.Text = "";
@@ -113,6 +123,7 @@ namespace CryptoWall
             GetCheckBox(CryptoWallScreen.AllData);
         }
         
+        //second see button
         private void CryptoButton2(object sender, RoutedEventArgs e) //second button to get info crypto
         {
             name3.Text = "";
@@ -123,6 +134,8 @@ namespace CryptoWall
             
             GetCheckBox2(CryptoWallScreen.AllData);
         }
+
+        //button back home to loop through
         private void Home_button(object sender, RoutedEventArgs e) //button to go back to StartPage
         {
             try
