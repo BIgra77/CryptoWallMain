@@ -9,11 +9,12 @@ namespace CryptoWall
     public partial class CryptoWallScreen : Window
     {
         private static Task<LunarCrush.Root> AllData;
+        private string Info { get; set; }
         public CryptoWallScreen()
         {
             InitializeComponent();
-            CryptoWallScreen.AllData = Initialize();
-            CryptoWallScreen.AllData = Initialize2();
+            AllData = Initialize();
+            AllData = Initialize2();
         }
 
         //init for the first combo box in the xaml
@@ -21,7 +22,9 @@ namespace CryptoWall
         {
             LunarCrush lunarCrush = new LunarCrush();
             //print out all the info in a hidden box in the xaml so that we can then choose what we want to print out
-            info.Text = await lunarCrush.Connect();
+            //info.Text = await lunarCrush.Connect();
+
+            Info = await lunarCrush.Connect();
 
             //init the list of cryptocurrencies
             List<string> CryptoName = new List<string>() { } ;
@@ -96,12 +99,12 @@ namespace CryptoWall
         //get the date from select crypto and return it in the second table
         private void GetCheckBox2(Task<LunarCrush.Root> AllData)
         {
-            var queryAllDataName2 = from Data in AllData.Result.data
+            var queryAllDataName = from Data in AllData.Result.data
                 where Data.name == ChoiceComboBox2.Text
                 select new { Name = Data.name, Price = Data.price, Symbol = Data.symbol, Price_btc = Data.price_btc, Market_cap = Data.market_cap};
 
 
-            foreach (var item in queryAllDataName2)
+            foreach (var item in queryAllDataName)
             {
                 name3.Text = item.Name;
                 stockSymbol3.Text = item.Symbol;
@@ -120,7 +123,7 @@ namespace CryptoWall
             btc1.Text = "";
             market1.Text = "";
             
-            GetCheckBox(CryptoWallScreen.AllData);
+            GetCheckBox(AllData);
         }
         
         //second see button
@@ -132,7 +135,7 @@ namespace CryptoWall
             btc3.Text = "";
             market3.Text = "";
             
-            GetCheckBox2(CryptoWallScreen.AllData);
+            GetCheckBox2(AllData);
         }
 
         //button back home to loop through
