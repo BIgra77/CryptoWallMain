@@ -29,7 +29,7 @@ namespace CryptoWall
 
         //init the data for each cryptocurrency : name of the cryptocurrency, stock symbol, price, price compared to the bitcoin price, market capitalization
         //market cap: Market capitalization refers to the total dollar market value of a company's outstanding shares of stock
-        public class Datum
+        public class CryptoData
         {
             public string name { get; set; }
             public string symbol { get; set; }
@@ -41,7 +41,7 @@ namespace CryptoWall
         //list of cryptocurrencies
         public class Root
         {
-            public List<Datum> data { get; set; }
+            public List<CryptoData> data { get; set; }
         }
 
     }    
